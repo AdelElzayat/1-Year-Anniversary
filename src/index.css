@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base ---------- */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #07070f;
+  color: #f8f0e0;
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(220, 192, 131, 0.35);
+  color: #fff;
+}
+
+/* Elegant thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(220, 192, 131, 0.35) transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(220, 192, 131, 0.3);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid rgba(236, 217, 166, 0.85);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Utilities ---------- */
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-hand {
+    font-family: 'Caveat', cursive;
+  }
+  .text-glow {
+    text-shadow: 0 0 30px rgba(236, 217, 166, 0.4), 0 0 80px rgba(236, 217, 166, 0.15);
+  }
+  .text-glow-rose {
+    text-shadow: 0 0 30px rgba(224, 167, 174, 0.45), 0 0 80px rgba(224, 167, 174, 0.15);
+  }
+  .glass {
+    background: rgba(19, 19, 37, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(236, 217, 166, 0.12);
+  }
+  .hairline {
+    border: 1px solid rgba(236, 217, 166, 0.14);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ---------- Grain overlay ---------- */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Shimmering gold text ---------- */
+.shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #c9a35c 20%,
+    #f2e3bd 40%,
+    #ecd9a6 50%,
+    #f2e3bd 60%,
+    #c9a35c 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
