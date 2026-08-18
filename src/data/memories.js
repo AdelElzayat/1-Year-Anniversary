@@ -25,12 +25,12 @@ export const memories = [
     id: 'first-message',
     chapter: 1,
     title: 'The First Message',
-    date: 'PLACEHOLDER DATE',
-    image: null,
+    date: '13/2/2024',
+    image: '/memories/first-message.png',
     audio: null,
     emoji: '📱',
     location: { x: 18, y: 22 },
-    caption: 'The one that started everything.',
+    caption: 'How we met?.',
     description:
       'PLACEHOLDER — Describe the first message you ever sent her here. What made you hit send? What did she reply? Write it like you remember it.'
   },

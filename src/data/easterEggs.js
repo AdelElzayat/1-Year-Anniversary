@@ -4,7 +4,7 @@
  *  Customize each egg here. Trigger types:
  *   - star    : a hidden star in the sky (tap it several times)
  *   - typeword: type a word anywhere on the page
- *   - title   : tap the "Us." title on the opening screen
+ *   - title   : tap the "Soulmates." title on the opening screen
  *  The secret chapter is unlocked by typing the secret word
  *  from storyConfig.secretWord (never shown in the UI).
  * ============================================================

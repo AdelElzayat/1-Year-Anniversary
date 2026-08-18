@@ -8,7 +8,7 @@ import GlowButton from '../components/GlowButton'
 
 /**
  * Opening screen — almost pitch black, gently fills with life,
- * then: "Us." → tagline → the two yes buttons.
+ * then: "Soulmates." → tagline → the two yes buttons.
  * Also hosts two hidden easter eggs (a star, and the title).
  */
 export default function Opening({ onBegin }) {
@@ -64,7 +64,7 @@ export default function Opening({ onBegin }) {
         transition={{ duration: 2, ease: 'easeOut' }}
         className="font-display font-light text-[22vw] sm:text-8xl md:text-9xl leading-none text-cream-50 text-glow select-none cursor-default"
       >
-        Us.
+        Soulmates.
       </motion.h1>
 
       <motion.p

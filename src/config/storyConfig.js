@@ -1,6 +1,6 @@
 /**
  * ============================================================
- *  US. — STORY CONFIGURATION
+ *  SOULMATES. — STORY CONFIGURATION
  *  Personalize the ENTIRE experience from this one file.
  *  Change names, dates, the secret word, the final mode, and
  *  custom copy. Nothing else needs to be touched to customize.
@@ -66,8 +66,8 @@ export const storyConfig = {
   /* ---- Custom copy ---------------------------------------- */
   copy: {
     opening: {
-      headline: 'Us.',
-      sub: 'A story written by two idiots. ❤️',
+      headline: 'Soulmates.',
+      sub: 'A story written by a special guy. ❤️',
       promptBefore: 'Before you continue…',
       prompt: 'Are you ready to relive our story?',
       yes: 'YES ❤️',

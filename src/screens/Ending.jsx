@@ -38,7 +38,7 @@ export default function Ending() {
         {phase === 'stats' ? (
           <motion.div key="stats" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, filter: 'blur(8px)' }} className="w-full max-w-md text-center">
             <p className="font-display italic text-cream-200/70 text-xl mb-2">Thank you for playing.</p>
-            <h2 className="font-display text-3xl text-cream-50 text-glow mb-10">Us. — the recap</h2>
+            <h2 className="font-display text-3xl text-cream-50 text-glow mb-10">Soulmates. — the recap</h2>
 
             <div className="space-y-3">
               <StatRow label={stats.memories} value="∞" accent />
@@ -133,7 +133,7 @@ export default function Ending() {
                 transition={{ duration: 1.4, delay: 1.2 }}
                 className="font-display italic text-cream-200/50 text-lg mt-8"
               >
-                — Us.
+                — Soulmates.
               </motion.p>
             </div>
           </motion.div>

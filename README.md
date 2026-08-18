@@ -1,4 +1,4 @@
-# Us. — a tiny playable love story ❤️
+# Soulmates. — a tiny playable love story ❤️
 
 A mobile-first, cinematic, interactive anniversary experience for your wife.
 It’s not a website — it’s a **tiny video game about your relationship**.
@@ -54,9 +54,9 @@ to touch components.
 ## The journey
 
 1. **Loading** — “Preparing our memories…”
-2. **Opening** — “Us.” → the two yes buttons
+2. **Opening** — “Soulmates.” → the two yes buttons
 3. **Ch 1 · How It Started** — tap glowing memory objects on a little map
-4. **Ch 2 · Us.** — a relationship path/timeline that fills in as you unlock it
+4. **Ch 2 · Soulmates.** — a relationship path/timeline that fills in as you unlock it
 5. **Ch 3 · Do You Remember?** — a playful, forgiving quiz
 6. **Ch 4 · The Memory Vault** — collect 🔑 keys, open the vault, explore a museum
 7. **Final · Our Story Isn’t Finished** — the road from Day 1 into an empty future

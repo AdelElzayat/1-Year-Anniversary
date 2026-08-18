@@ -15,7 +15,7 @@ export const chapters = [
   {
     id: 'ch2',
     number: 2,
-    title: 'Us.',
+    title: 'Soulmates.',
     subtitle: 'Somewhere along the way, it stopped being a story about two people.',
     music: 'chapter2',
     intro: ['Two people.', 'Then two idiots.', 'Then us.']

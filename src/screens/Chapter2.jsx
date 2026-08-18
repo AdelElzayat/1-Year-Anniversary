@@ -10,7 +10,7 @@ import ConfettiBurst from '../components/ConfettiBurst'
 import { useAnniversaryTimer } from '../hooks/useAnniversaryTimer'
 
 /**
- * Chapter 2 — "Us."
+ * Chapter 2 — "Soulmates."
  * A vertical relationship path / timeline. The connecting line
  * fills in as milestones are unlocked, like a little game map.
  */
@@ -41,7 +41,7 @@ export default function Chapter2({ onComplete }) {
 
       <div className="text-center mb-10">
         <p className="text-gold-300 tracking-[0.5em] uppercase text-[11px] mb-1">Chapter 2</p>
-        <h1 className="font-display text-4xl sm:text-5xl text-cream-50 text-glow">Us.</h1>
+        <h1 className="font-display text-4xl sm:text-5xl text-cream-50 text-glow">Soulmates.</h1>
         <p className="mt-2 text-cream-200/60 font-display italic text-base max-w-md mx-auto">
           Somewhere along the way, it stopped being a story about two people.
         </p>
