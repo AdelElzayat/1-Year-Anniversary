@@ -43,7 +43,7 @@ export default function VaultViewer({ item, category, open, onClose }) {
                 <div>
                   <div className="overflow-hidden rounded-xl bg-midnight-900">
                     {item.image ? (
-                      <img src={item.image} alt={item.title} loading="lazy" className="w-full h-60 object-cover" />
+                      <img src={item.image} alt={item.title} loading="lazy" className="w-full h-auto object-contain" />
                     ) : (
                       <div className="w-full h-60 bg-gradient-to-br from-midnight-800 via-midnight-700 to-rose-900/50 flex items-center justify-center">
                         <p className="text-cream-100/40 text-xs tracking-[0.3em] uppercase">placeholder photo</p>

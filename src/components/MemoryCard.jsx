@@ -78,7 +78,7 @@ export default function MemoryCard({ memory, open, onClose, unlocked, onRemember
                     src={memory.image}
                     alt={memory.title}
                     loading="lazy"
-                    className="w-full h-56 object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               ) : (
