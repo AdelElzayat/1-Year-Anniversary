@@ -22,9 +22,14 @@ export const blurIn = {
 }
 
 export const screenVariants = {
-  initial: { opacity: 0, filter: 'blur(8px)' },
-  enter: { opacity: 1, filter: 'blur(0px)', transition: { duration: 0.7, ease: 'easeOut' } },
-  exit: { opacity: 0, filter: 'blur(8px)', transition: { duration: 0.55, ease: 'easeIn' } }
+  // NOTE: intentionally animates opacity only (no `filter`/`transform`).
+  // Any non-none filter/transform on this wrapper turns it into a containing
+  // block, which makes `position: fixed` children (memory cards, confetti,
+  // vault viewer…) position relative to this whole tall page instead of the
+  // viewport — the card then appears off-center / at the bottom.
+  initial: { opacity: 0 },
+  enter: { opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+  exit: { opacity: 0, transition: { duration: 0.45, ease: 'easeIn' } }
 }
 
 export const stagger = (delay = 0.08, duration = 0.7) => ({

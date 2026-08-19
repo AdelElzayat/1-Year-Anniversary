@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { KeyRound, X } from 'lucide-react'
@@ -34,7 +35,11 @@ export default function MemoryCard({ memory, open, onClose, unlocked, onRemember
     onClose?.()
   }
 
-  return (
+  // Render the modal into <body> so no ancestor { filter / transform /
+  // will-change } can hijack the `position: fixed` overlay (that ancestor
+  // would become the containing block and the card would not center in the
+  // viewport — e.g. it appeared at the bottom on the tall Chapter 2 page).
+  return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
@@ -143,6 +148,7 @@ export default function MemoryCard({ memory, open, onClose, unlocked, onRemember
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }
