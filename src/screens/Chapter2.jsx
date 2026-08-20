@@ -24,7 +24,10 @@ export default function Chapter2({ onComplete }) {
   const unlocked = state.unlockedMemories
   const complete = list.every((m) => unlocked.includes(m.id))
   const unlockedHere = list.filter((m) => unlocked.includes(m.id)).length
-  const fillPct = (unlockedHere / list.length) * 100
+  // The golden trail runs down the milestones and ENDS at the "we've been
+  // together" capsule — it never extends past that terminator node.
+  const TERMINAL_PCT = 92
+  const fillPct = Math.min((unlockedHere / list.length) * 100, TERMINAL_PCT)
 
   const openMemory = (m) => {
     sfx.click()
@@ -52,7 +55,7 @@ export default function Chapter2({ onComplete }) {
 
       {/* timeline */}
       <div className="relative max-w-2xl mx-auto">
-        <div className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 bottom-0 w-[2px] bg-midnight-700/60 rounded-full" aria-hidden="true" />
+        <div className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 w-[2px] bg-midnight-700/60 rounded-full" style={{ height: `${TERMINAL_PCT}%` }} aria-hidden="true" />
         <div
           className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 w-[2px] rounded-full bg-gradient-to-b from-gold-400 to-rose-400 shadow-glow transition-[height] duration-700"
           style={{ height: `${fillPct}%` }}
