@@ -17,7 +17,7 @@ export const isChapterMemoryComplete = (chapter, unlockedMemories) =>
 export const isChapterComplete = (completedChapters, chapter) =>
   completedChapters.includes(chapter)
 
-/** Sequential unlock order: ch1 → ch2 → ch3 → ch4 → final → ending */
+/** Sequential unlock order: ch1 → ch2 → ch3 → ch4 → ending */
 export const isScreenUnlocked = (progress, screen) => {
   const { completedChapters } = progress
   switch (screen) {
@@ -31,10 +31,8 @@ export const isScreenUnlocked = (progress, screen) => {
       return isChapterComplete(completedChapters, 'ch2')
     case 'ch4':
       return isChapterComplete(completedChapters, 'ch3')
-    case 'final':
-      return isChapterComplete(completedChapters, 'ch4')
     case 'ending':
-      return isChapterComplete(completedChapters, 'final')
+      return isChapterComplete(completedChapters, 'ch4')
     case 'secret':
       return progress.secretUnlocked
     default:

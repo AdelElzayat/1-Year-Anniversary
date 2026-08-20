@@ -35,13 +35,5 @@ export const chapters = [
     subtitle: 'Some memories deserve to be kept somewhere safe.',
     music: 'chapter4',
     intro: ['Every memory we made.', 'Every photo. Every message.', 'Locked away… just for you.']
-  },
-  {
-    id: 'final',
-    number: 5,
-    title: 'Our Story Isn’t Finished',
-    subtitle: 'The best part about a story like ours? It keeps writing itself.',
-    music: 'final',
-    intro: []
   }
 ]

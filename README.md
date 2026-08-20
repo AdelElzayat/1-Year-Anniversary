@@ -27,8 +27,7 @@ to touch components.
 | `src/config/storyConfig.js` | **One-stop shop**: names, dates, secret word, final mode, final call/link, vault key requirement, per-chapter music tracks, all copy. |
 | `src/data/memories.js` | The Chapter 1 map memories + Chapter 2 timeline milestones. Add/remove/edit freely. |
 | `src/data/quiz.js` | The “Do You Remember?” quiz questions + fun messages + result messages. |
-| `src/data/vault.js` | The Memory Vault museum — photos, messages, audio, videos, favorites. |
-| `src/data/timeline.js` | The Final Chapter journey + empty Future Map items. |
+| `src/data/vault.js` | The Memory Vault museum — photos + messages. Add/remove/edit freely. |
 | `src/data/easterEggs.js` | Hidden easter eggs + the SECRET CHAPTER memory. |
 | `src/data/chapters.js` | Chapter titles/subtitles (tweak the flavor). |
 
@@ -59,9 +58,8 @@ to touch components.
 4. **Ch 2 · Soulmates.** — a relationship path/timeline that fills in as you unlock it
 5. **Ch 3 · Do You Remember?** — a playful, forgiving quiz
 6. **Ch 4 · The Memory Vault** — collect 🔑 keys, open the vault, explore a museum
-7. **Final · Our Story Isn’t Finished** — the road from Day 1 into an empty future
-8. **Ending** — stats, an achievement, and the final surprise
-9. **❤️ Secret Chapter** — only reachable with your secret word
+7. **Ending** — stats, an achievement, and the final surprise
+8. **❤️ Secret Chapter** — only reachable with your secret word
 
 ## Features
 
@@ -78,7 +76,7 @@ to touch components.
 ```
 src/
   config/storyConfig.js   ← ALL personalization
-  data/                   ← memories, quiz, vault, timeline, easter eggs, chapters
+  data/                   ← memories, quiz, vault, easter eggs, chapters
   game/progression.js     ← keys, unlocks, chapter gating
   audio/audio.js          ← synthesized SFX + generative ambient music (WebAudio)
   context/                ← Game (progress), Audio (music), Settings (reduce-motion)

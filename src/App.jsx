@@ -16,7 +16,6 @@ import Chapter1 from './screens/Chapter1'
 import Chapter2 from './screens/Chapter2'
 import Chapter3 from './screens/Chapter3'
 import Chapter4 from './screens/Chapter4'
-import FinalChapter from './screens/FinalChapter'
 import Ending from './screens/Ending'
 import SecretChapter from './screens/SecretChapter'
 
@@ -75,13 +74,15 @@ export default function App() {
       body = !introDone ? (
         <ChapterIntro chapter={chapterMap.ch4} onBegin={() => setIntroDone(true)} />
       ) : (
-        <Chapter4 onComplete={advance('ch4', 'final')} />
+        <Chapter4 onComplete={advance('ch4', 'ending')} />
       )
       break
-    case 'final':
-      body = <FinalChapter onComplete={advance('final', 'ending')} />
-      break
     case 'ending':
+      body = <Ending />
+      break
+    case 'final':
+      // Legacy save games that were mid-way through the removed final chapter
+      // (ch5) go straight to the ending instead of getting stuck.
       body = <Ending />
       break
     case 'secret':

@@ -21,7 +21,6 @@ export const CHAPTER_MUSIC_KEYS = {
   ch2: 'chapter2',
   ch3: 'chapter3',
   ch4: 'chapter4',
-  final: 'final',
   ending: 'ending',
   secret: 'secret'
 }

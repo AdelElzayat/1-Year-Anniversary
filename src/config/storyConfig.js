@@ -35,7 +35,7 @@ export const storyConfig = {
   finalMode: 'LONG_DISTANCE',
   finalContact: {
     label: 'CALL ME ❤️',
-    href: 'tel:+15550000000' // ← change to your real number
+    href: 'tel:+201022558885' // ← change to your real number
   },
 
   /* ---- Vault ---------------------------------------------- */
@@ -90,13 +90,6 @@ export const storyConfig = {
       keysHeld: 'keys held',
       unlock: 'Unlock the Vault',
       continue: 'I’ve seen enough ❤️'
-    },
-    final: {
-      youMadeIt: 'You made it.',
-      somethingMore: 'But there’s something you haven’t unlocked yet.',
-      theFuture: 'The future.',
-      tomorrow: 'Tomorrow',
-      notFinished: 'Because our story isn’t finished.'
     },
     ending: {
       thanks: 'Thank you for playing.',
