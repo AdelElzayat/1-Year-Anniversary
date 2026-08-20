@@ -96,7 +96,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion={reduceMotion ? 'always' : 'user'}>
-      <div className="grain relative min-h-screen bg-midnight-950 text-cream-100 overflow-x-hidden">
+      <div className="grain romantic-bg relative min-h-screen text-cream-100 overflow-x-hidden">
         <ParticleField />
 
         <main className="relative z-[2]">

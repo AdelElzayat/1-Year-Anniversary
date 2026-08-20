@@ -71,7 +71,7 @@ export default function Chapter1({ onComplete }) {
           <path
             d={pathD}
             fill="none"
-            stroke="rgba(236,217,166,0.16)"
+            stroke="rgba(217,143,166,0.20)"
             strokeWidth="0.4"
             strokeDasharray="0.8 1.4"
             strokeLinecap="round"

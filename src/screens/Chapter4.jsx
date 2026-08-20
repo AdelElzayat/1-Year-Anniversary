@@ -26,7 +26,7 @@ function VaultDoor({ keys, required, ready, onUnlock }) {
             <span className="text-2xl">{ready ? '🔓' : '🔒'}</span>
           </div>
           {/* dial ticks */}
-          <div className="absolute inset-0 rounded-full opacity-50" style={{ background: 'repeating-conic-gradient(rgba(220,192,131,0.2) 0deg 4deg, transparent 4deg 15deg)' }} />
+          <div className="absolute inset-0 rounded-full opacity-50" style={{ background: 'repeating-conic-gradient(rgba(224,198,152,0.22) 0deg 4deg, transparent 4deg 15deg)' }} />
         </div>
       </div>
 

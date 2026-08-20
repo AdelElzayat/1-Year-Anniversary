@@ -29,7 +29,7 @@ export default function LoadingScreen({ onDone }) {
   }, [onDone])
 
   return (
-    <div className="fixed inset-0 z-[100] bg-midnight-950 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z-[100] romantic-bg flex flex-col items-center justify-center">
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -38,7 +38,7 @@ export default function ParticleField({ density = 0.00009 }) {
         vy: -(Math.random() * 0.06 + 0.02),
         tw: Math.random() * Math.PI * 2,
         tws: Math.random() * 0.004 + 0.001,
-        hue: Math.random() > 0.82 ? '224, 167, 174' : Math.random() > 0.5 ? '236, 217, 166' : '179, 162, 216'
+        hue: Math.random() > 0.82 ? '217, 143, 166' : Math.random() > 0.5 ? '232, 199, 184' : '155, 82, 107'
       }))
     }
 
@@ -57,7 +57,7 @@ export default function ParticleField({ density = 0.00009 }) {
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(${p.hue}, ${alpha})`
-        ctx.shadowColor = 'rgba(236,217,166,0.5)'
+        ctx.shadowColor = 'rgba(217,143,166,0.55)'
         ctx.shadowBlur = p.r * 6
         ctx.fill()
         ctx.shadowBlur = 0

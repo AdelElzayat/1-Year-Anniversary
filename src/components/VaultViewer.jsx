@@ -68,8 +68,8 @@ export default function VaultViewer({ item, category, open, onClose }) {
                         transition={{ delay: i * 0.7, duration: 0.4 }}
                         className={`flex ${fromMe ? 'justify-end' : 'justify-start'}`}
                       >
-                        <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${fromMe ? 'bg-gold-400 text-midnight-900 rounded-br-sm' : 'bg-cream-200 text-midnight-900 rounded-bl-sm'}`}>
-                          <span className="block text-[10px] uppercase tracking-widest text-midnight-900/40 mb-0.5">{label}</span>
+                        <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${fromMe ? 'bg-rose-600 text-cream-100 rounded-br-sm' : 'bg-rose-200/80 text-midnight-900 rounded-bl-sm'}`}>
+                          <span className={`block text-[10px] uppercase tracking-widest mb-0.5 ${fromMe ? 'text-cream-100/70' : 'text-midnight-900/45'}`}>{label}</span>
                           {line.text}
                         </div>
                       </motion.div>

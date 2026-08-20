@@ -67,7 +67,7 @@ export default function Ending() {
             </div>
           </motion.div>
         ) : (
-          <motion.div key="finale" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 bg-black flex flex-col items-center justify-center px-8 text-center">
+          <motion.div key="finale" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 romantic-bg flex flex-col items-center justify-center px-8 text-center">
             <div className="min-h-[50vh] flex flex-col items-center justify-center gap-6 max-w-lg">
               <motion.p
                 initial={{ opacity: 0 }}
