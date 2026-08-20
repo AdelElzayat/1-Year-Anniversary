@@ -36,11 +36,15 @@ export default function SecretChapter() {
             {s.date || 'a date only we remember'}
           </div>
           <div className="relative w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-midnight-800 via-midnight-700 to-rose-900/60 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-5xl mb-2">{s.emoji}</div>
-              <p className="text-cream-100/50 text-xs tracking-[0.25em] uppercase">placeholder</p>
-              <p className="text-gold-200/70 font-hand text-xl">your secret memory goes here</p>
-            </div>
+            {s.image ? (
+              <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-contain" />
+            ) : (
+              <div className="text-center">
+                <div className="text-5xl mb-2">{s.emoji}</div>
+                <p className="text-cream-100/50 text-xs tracking-[0.25em] uppercase">placeholder</p>
+                <p className="text-gold-200/70 font-hand text-xl">your secret memory goes here</p>
+              </div>
+            )}
           </div>
           <p className="text-midnight-800/85 text-[15px] leading-relaxed">{s.text}</p>
           <p className="font-display italic text-midnight-900/70 border-t border-midnight-900/10 pt-3">{s.note}</p>
