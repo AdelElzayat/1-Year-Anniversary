@@ -16,23 +16,24 @@ export default function VaultViewer({ item, category, open, onClose }) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-[75] flex items-center justify-center p-4 overflow-y-auto"
+        className="fixed inset-0 z-[75] overflow-y-auto overscroll-contain"
         role="dialog"
         aria-modal="true"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.button className="absolute inset-0 bg-black/80 backdrop-blur-lg cursor-pointer" onClick={onClose} aria-label="Close viewer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
-        <button onClick={onClose} aria-label="Close" className="absolute top-4 right-4 z-10 text-cream-100/60 hover:text-cream-100 p-2 cursor-pointer"><X size={22} /></button>
+        <motion.button className="fixed inset-0 bg-black/80 backdrop-blur-lg cursor-pointer" onClick={onClose} aria-label="Close viewer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+        <button onClick={onClose} aria-label="Close" className="fixed top-4 right-4 z-10 text-cream-100/60 hover:text-cream-100 p-2 cursor-pointer"><X size={22} /></button>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 24, scale: 0.97 }}
-          transition={{ type: 'spring', damping: 24, stiffness: 240 }}
-          className="relative w-full max-w-md bg-cream-100 text-midnight-900 rounded-2xl shadow-card overflow-hidden my-6"
-        >
+        <div className="min-h-full flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 24, scale: 0.97 }}
+            transition={{ type: 'spring', damping: 24, stiffness: 240 }}
+            className="relative w-full max-w-md bg-cream-100 text-midnight-900 rounded-2xl shadow-card overflow-hidden my-6"
+          >
           <div className="pt-6 px-5 pb-6">
             <p className="text-[10px] tracking-[0.3em] uppercase text-midnight-900/45 mb-1">{category.emoji} {category.label}</p>
             <h3 className="font-display text-3xl font-semibold leading-tight">{item.title}</h3>
@@ -43,7 +44,7 @@ export default function VaultViewer({ item, category, open, onClose }) {
                 <div>
                   <div className="overflow-hidden rounded-xl bg-midnight-900">
                     {item.image ? (
-                      <img src={item.image} alt={item.title} loading="lazy" className="w-full h-auto object-contain" />
+                      <img src={item.image} alt={item.title} loading="lazy" className="block w-full h-auto max-h-[68vh] object-contain mx-auto" />
                     ) : (
                       <div className="w-full h-60 bg-gradient-to-br from-midnight-800 via-midnight-700 to-rose-900/50 flex items-center justify-center">
                         <p className="text-cream-100/40 text-xs tracking-[0.3em] uppercase">placeholder photo</p>
@@ -116,7 +117,8 @@ export default function VaultViewer({ item, category, open, onClose }) {
               Close
             </button>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
     </AnimatePresence>
   )

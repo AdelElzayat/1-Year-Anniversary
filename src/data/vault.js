@@ -25,21 +25,21 @@ export const vaultCategories = [
       {
         id: 'vault-photo-1',
         title: 'YOUR FIRST PHOTO',
-        date: 'PLACEHOLDER DATE',
+        date: '31/8/2025',
         image: '/memories/ur-first-pic.JPG',
-        caption: 'YOUR CAPTION HERE',
+        caption: 'TOOK HALF A MONTH TO SEND WITH NO HEART',
         message:
-          'PLACEHOLDER — I didn’t know it at the time, but this would become one of my favorite memories.',
+          '1 of my favorite pics ever cause thats the first thing i got to see after getting married to u.',
         audio: null
       },
       {
         id: 'vault-photo-2',
-        title: 'YOUR FAVORITE PHOTO',
-        date: 'PLACEHOLDER DATE',
-        image: null,
-        caption: 'YOUR CAPTION HERE',
+        title: 'MY FAVORITE PHOTO',
+        date: '26/9/2025',
+        image: '/memories/fav-pic.png',
+        caption: 'Forever ny fav :))',
         message:
-          'PLACEHOLDER — Every time I look at this one, I remember exactly how it felt to be there with you.',
+          'This pic so far will be top 1 for me even i got waaay too many new sexy pics and i swear they all are my fav, but this 1 has a place in my heart.',
         audio: null
       }
     ]
@@ -54,27 +54,29 @@ export const vaultCategories = [
       {
         id: 'vault-msg-1',
         title: 'YOUR FIRST MESSAGE',
-        date: 'PLACEHOLDER DATE',
+        date: '13/2/2024',
         image: null,
         lines: [
-          { from: 'HER', text: 'YOUR FIRST MESSAGE — replace these lines with your real conversation.' },
-          { from: 'ME', text: 'YOUR REPLY — it went something like this.' },
-          { from: 'HER', text: 'And it never really stopped, did it?' }
+          { from: 'ME', text: 'Sup' },
+          { from: 'Her', text: 'Hi' },
         ],
-        note: 'You had no idea how important these conversations would become.',
+        note: 'Most gay convo ever.',
         audio: null
       },
       {
         id: 'vault-msg-2',
-        title: 'THE LATE NIGHT TEXTS',
-        date: 'PLACEHOLDER DATE',
+        title: 'FAV CONVO',
+        date: '20/8/2025',
         image: null,
         lines: [
-          { from: 'ME', text: 'YOUR LATE NIGHT MESSAGE' },
-          { from: 'HER', text: 'YOUR LATE NIGHT REPLY' },
-          { from: 'ME', text: '“Go to sleep.” “You go to sleep.” “We’re both going to sleep.” (neither of us slept)' }
+          { from: 'HER', text: 'Vyy u wanna date me???' },
+          { from: 'ME', text: 'U SAID IT 💀' },
+          { from: 'HER', text: '😭😭😭' },
+          { from: 'ME', text: 'I would love to date u :))' },
+          { from: 'ME', text: 'SEE ITS EZ' },
+          { from: 'HER', text: 'NOO ITS NOT' }
         ],
-        note: 'Some of our best conversations happened at 2AM.',
+        note: 'Best day of my life.',
         audio: null
       }
     ]
