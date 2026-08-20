@@ -26,7 +26,7 @@ export const vaultCategories = [
         id: 'vault-photo-1',
         title: 'YOUR FIRST PHOTO',
         date: 'PLACEHOLDER DATE',
-        image: null,
+        image: '/memories/ur-first-pic.JPG',
         caption: 'YOUR CAPTION HERE',
         message:
           'PLACEHOLDER — I didn’t know it at the time, but this would become one of my favorite memories.',

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGame } from '../context/GameContext'
 import { memories } from '../data/memories'
@@ -24,10 +24,40 @@ export default function Chapter2({ onComplete }) {
   const unlocked = state.unlockedMemories
   const complete = list.every((m) => unlocked.includes(m.id))
   const unlockedHere = list.filter((m) => unlocked.includes(m.id)).length
-  // The golden trail runs down the milestones and ENDS at the "we've been
-  // together" capsule — it never extends past that terminator node.
-  const TERMINAL_PCT = 92
-  const fillPct = Math.min((unlockedHere / list.length) * 100, TERMINAL_PCT)
+
+  const containerRef = useRef(null)
+  const nodeRefs = useRef([])
+  const capRef = useRef(null)
+  const [lineHeight, setLineHeight] = useState(0)
+
+  // The golden trail grows to *exactly* the newest unlocked milestone node
+  // (measured against the real layout), so it never overshoots past a level
+  // when card heights vary. On completion it extends to the terminator
+  // "we've been together" capsule; before that it never goes past a node.
+  useLayoutEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+    const cRect = container.getBoundingClientRect()
+    const cap = capRef.current
+    let h = 0
+
+    if (unlockedHere > 0) {
+      const node = nodeRefs.current[unlockedHere - 1]
+      if (node) {
+        const r = node.getBoundingClientRect()
+        h = r.top - cRect.top + r.height / 2
+      }
+    }
+    if (cap) {
+      const cr = cap.getBoundingClientRect()
+      if (complete) {
+        h = cr.top - cRect.top + cr.height / 2
+      } else {
+        h = Math.min(h, cr.top - cRect.top - 2)
+      }
+    }
+    setLineHeight(h)
+  }, [unlockedHere, complete])
 
   const openMemory = (m) => {
     sfx.click()
@@ -54,11 +84,11 @@ export default function Chapter2({ onComplete }) {
       </div>
 
       {/* timeline */}
-      <div className="relative max-w-2xl mx-auto">
-        <div className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 w-[2px] bg-midnight-700/60 rounded-full" style={{ height: `${TERMINAL_PCT}%` }} aria-hidden="true" />
+      <div className="relative max-w-2xl mx-auto" ref={containerRef}>
+        <div className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 w-[2px] bg-midnight-700/60 rounded-full" style={{ height: `${lineHeight}px` }} aria-hidden="true" />
         <div
           className="absolute left-[26px] sm:left-1/2 sm:-translate-x-[1px] top-0 w-[2px] rounded-full bg-gradient-to-b from-gold-400 to-rose-400 shadow-glow transition-[height] duration-700"
-          style={{ height: `${fillPct}%` }}
+          style={{ height: `${lineHeight}px` }}
           aria-hidden="true"
         />
 
@@ -68,7 +98,7 @@ export default function Chapter2({ onComplete }) {
             const onLeft = i % 2 === 0
             return (
               <div key={m.id} className={`relative flex items-start gap-4 sm:gap-0 ${onLeft ? 'sm:flex-row-reverse' : 'sm:flex-row'}`}>
-                <div className="absolute left-[7px] sm:left-1/2 sm:-translate-x-1/2 top-4 flex items-center justify-center">
+                <div className="absolute left-[7px] sm:left-1/2 sm:-translate-x-1/2 top-4 flex items-center justify-center" ref={(el) => (nodeRefs.current[i] = el)}>
                   <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center text-lg border-2 transition-all duration-500 ${
                       isUnlocked ? 'border-gold-300 bg-gold-400/25 shadow-glow' : 'border-cream-100/20 bg-midnight-800/60'
@@ -105,7 +135,7 @@ export default function Chapter2({ onComplete }) {
         </div>
 
         {/* terminal — the "we've been together" capsule the golden trail wraps around */}
-        <div className="relative mt-12 flex justify-center">
+        <div className="relative mt-12 flex justify-center" ref={capRef}>
           <div
             className={`relative rounded-full transition-all duration-700 ${
               complete
