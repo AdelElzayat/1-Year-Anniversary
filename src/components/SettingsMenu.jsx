@@ -76,7 +76,7 @@ export default function SettingsMenu() {
                 <div className="hairline rounded-2xl p-4 my-3">
                   <div className="flex items-center gap-2 text-gold-300 mb-2">
                     <Clock3 size={15} />
-                    <span className="text-[11px] tracking-[0.2em] uppercase">We’ve been us for…</span>
+                    <span className="text-[11px] tracking-[0.2em] uppercase">We’ve been together for…</span>
                   </div>
                   <div className="flex items-end justify-between font-display text-cream-100">
                     <div className="text-center">

@@ -1,6 +1,6 @@
 import { storyConfig } from '../config/storyConfig'
 
-/** Total time "we've been us" as a human string, e.g. "5 years, 9 days" */
+/** Total time "we've been together" as a human string, e.g. "1 year, 1 day" */
 export const formatTogether = (ms) => {
   if (!ms || ms < 0) return 'forever'
   const s = Math.floor(ms / 1000)
@@ -13,7 +13,7 @@ export const formatTogether = (ms) => {
 }
 
 export const getTogetherMs = (now = Date.now()) =>
-  now - new Date(`${storyConfig.relationshipStartDate}T00:00:00`).getTime()
+  now - new Date(storyConfig.relationshipStartDate).getTime()
 
 /** Break a duration into { days, hours, minutes, seconds } */
 export const breakDuration = (ms) => {

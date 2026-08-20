@@ -19,8 +19,8 @@ export const storyConfig = {
   },
 
   /* ---- Dates -------------------------------------------- */
-  // Used by the subtle "We've been us for..." timer (ch 2)
-  relationshipStartDate: '2020-08-17', // ← the day it all started
+  // Used by the subtle "We've been together for..." timer (ch 2)
+  relationshipStartDate: '2025-08-20T18:30:00', // ← the exact moment it all started (20 Aug 2025, 6:30pm)
   // Used by the ending stats
   anniversaryDate: '2026-08-17',
 

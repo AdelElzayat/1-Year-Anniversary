@@ -43,26 +43,31 @@ export default function MemoryCard({ memory, open, onClose, unlocked, onRemember
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[70] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[70] overflow-y-auto"
           role="dialog"
           aria-modal="true"
           aria-label={memory.title}
         >
           <motion.button
             aria-label="Close memory"
-            className="absolute inset-0 bg-black/75 backdrop-blur-md cursor-pointer"
+            className="fixed inset-0 bg-black/75 backdrop-blur-md cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
           />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, rotate: -2, y: 30 }}
-            animate={{ opacity: 1, scale: 1, rotate: 1.5, y: 0 }}
-            exit={{ opacity: 0, scale: 0.94, y: 20 }}
-            transition={{ type: 'spring', damping: 26, stiffness: 260 }}
-            className="relative w-full max-w-md bg-cream-100 text-midnight-900 rounded-2xl shadow-card overflow-hidden"
-          >
+          {/* Scroll-safe centered card: `min-h-full flex` + `m-auto` on the
+              card keeps it centred in the screen when it fits, and lets the
+              overlay scroll (from the top) when a big image makes it taller
+              than the viewport — so "I remember" is always reachable. */}
+          <div className="relative min-h-full flex p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, rotate: -2, y: 30 }}
+              animate={{ opacity: 1, scale: 1, rotate: 1.5, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 20 }}
+              transition={{ type: 'spring', damping: 26, stiffness: 260 }}
+              className="relative w-full max-w-md m-auto bg-cream-100 text-midnight-900 rounded-2xl shadow-card overflow-hidden"
+            >
             {/* tape */}
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-7 bg-gold-300/50 rotate-2 rounded-sm shadow-sm" aria-hidden="true" />
 
@@ -145,7 +150,8 @@ export default function MemoryCard({ memory, open, onClose, unlocked, onRemember
             >
               <X size={20} />
             </button>
-          </motion.div>
+            </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>,

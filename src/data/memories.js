@@ -166,19 +166,6 @@ export const memories = [
     description:
       'Even tho its a long distance relationship and its soo hard to live without her we still make it sooo special and soo loving, we fill each day with memories and love.'
   },
-  {
-    id: 'today',
-    chapter: 2,
-    title: 'Today',
-    date: 'PLACEHOLDER DATE',
-    image: null,
-    audio: null,
-    emoji: '💍',
-    location: null,
-    caption: 'Right here. Right now.',
-    description:
-      'PLACEHOLDER — Describe what “us” looks like today. The small routines, the silly traditions, the way you still text each other random thoughts.'
-  }
 ]
 
 /* ---------- helpers ---------- */

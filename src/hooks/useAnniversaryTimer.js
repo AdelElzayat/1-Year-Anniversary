@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getTogetherMs, breakDuration, pad2 } from '../utils/dates'
 
-/** Live "We've been us for…" timer. Returns [days, hours, minutes, seconds]. */
+/** Live "We've been together for…" timer. Returns [days, hours, minutes, seconds]. */
 export const useAnniversaryTimer = (intervalMs = 1000) => {
   const [now, setNow] = useState(Date.now())
 

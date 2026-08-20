@@ -104,7 +104,7 @@ export default function Chapter2({ onComplete }) {
       {/* subtle anniversary timer */}
       <div className="text-center mt-12">
         <div className="inline-block glass rounded-full px-5 py-2.5">
-          <p className="text-[11px] tracking-[0.25em] uppercase text-cream-200/50">We’ve been us for…</p>
+          <p className="text-[11px] tracking-[0.25em] uppercase text-cream-200/50">We’ve been together for…</p>
           <p className="font-display text-cream-100 text-lg mt-0.5">
             {timer.days.toLocaleString()} days · {String(timer.hours).padStart(2, '0')}:{String(timer.minutes).padStart(2, '0')}:{String(timer.seconds).padStart(2, '0')}
           </p>
