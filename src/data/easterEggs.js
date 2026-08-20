@@ -41,9 +41,9 @@ export const easterEggs = [
 export const secretChapter = {
   id: 'secret',
   title: 'Our Secret',
-  date: 'PLACEHOLDER DATE',
-  image: null,
+  // date: 'PLACEHOLDER DATE',
+  image: "/memories/secret.JPG",
   emoji: '🔐',
-  text: 'PLACEHOLDER — This is your extra memory. The one you didn’t need a key for. The one only the two of you know about.',
+  text: 'In ur butt 🫦',
   note: 'If you’re reading this… you’re the only one in the world who could.'
 }

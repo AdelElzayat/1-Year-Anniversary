@@ -11,11 +11,11 @@ export const storyConfig = {
   /* ---- Names (used for dynamic copy) -------------------- */
   me: {
     name: 'Your Husband', // ← your name (what she calls you, ideally)
-    initials: 'YH'
+    initials: 'Dodo'
   },
   her: {
     name: 'My Love', // ← her name
-    initials: 'ML'
+    initials: 'Tata'
   },
 
   /* ---- Dates -------------------------------------------- */
@@ -27,7 +27,7 @@ export const storyConfig = {
   /* ---- Secret word (THE hidden easter egg) -------------- */
   // Typing this anywhere (or entering it in the ❦ dialog)
   // unlocks the SECRET CHAPTER. Never shown in the UI.
-  secretWord: 'moonlight',
+  secretWord: 'Red Dress',
 
   /* ---- Final mode ---------------------------------------- */
   // "TOGETHER"        → "Look beside you. ❤️"
